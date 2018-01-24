@@ -36,7 +36,6 @@ const HolmgrensBladet = () => (
                 <div>Här hittar du tidigare utgåvor....</div>
             </CollapsableContentEntry>
         </CollapsableContentEntry>
-
     </div>
 );
 

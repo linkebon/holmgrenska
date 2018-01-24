@@ -9,7 +9,7 @@ class CollapsableContentEntry extends Component {
         };
     }
 
-    rotateArrow() {
+    flipArrow() {
         this.setState(this.state.arrowDirection === 0 ? {arrowDirection: 180} : {arrowDirection: 0});
     }
 
@@ -18,7 +18,7 @@ class CollapsableContentEntry extends Component {
         const collapsedClass = isInitiallyCollapsed ? '' : 'show';
         const roundedTop = isRoundedTop ? 'rounded-top' : '';
         const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
-
+        const isCollapseDisabled = header === undefined || header === '';
         return (
             <div className="pos-f-t">
                 <div className={'collapse ' + collapsedClass} id={id}>
@@ -28,12 +28,12 @@ class CollapsableContentEntry extends Component {
                     </div>
                 </div>
                 <div className={'navbar ' + bgColorCssClass + ' ' + roundedBottom}>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                    <button disabled={isCollapseDisabled} className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target={'#' + id} aria-controls={id}
                             aria-expanded="false" aria-label={areaLabel} onClick={(e) => {
                         e.preventDefault();
                         if (isDisplayArrowDown) {
-                            this.rotateArrow();
+                            this.flipArrow();
                         }
                     }}>
                         <h4 className={textColorCssClass}><FontAwesomeIcon icon="chevron-down" className={isDisplayArrowDown ? '': 'hidden'} size="xs" transform={{rotate: this.state.arrowDirection}}/><span style={{marginRight: '10px'}} />{header}</h4>
