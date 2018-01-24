@@ -19,6 +19,8 @@ const HolmgrensBladet = () => (
             <br/>
             Ansvarig för Holmgrensbladet är Hampus Holmgren. e-postadress: <a
             href="mailto:bladet@holmgrenska.se">bladet@holmgrenska.se</a>
+            <br />
+            <br />
             Holmgrensbladets logotype är utförd av Tom Hård af Segersted (5621)
             <br/>
             <br/>

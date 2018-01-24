@@ -16,10 +16,10 @@ const App = () => (
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/board" component={Board}/>
                     <Route exact path="/holmgrensbladet" component={HolmgrensBladet}/>
-                    <Route component={NoMatch}/>
+                    <Route path="*" component={NoMatch}/>
                 </Switch>
                 <br/>
-                <Footer />
+                <Footer/>
             </div>
         </div>
     </Router>
