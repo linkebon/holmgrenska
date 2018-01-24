@@ -14,11 +14,11 @@ class CollapsableContentEntry extends Component {
     }
 
     render() {
-        const {id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isDisplayArrowDown, areaLabel} = this.props;
+        const {id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isCollapseDisabled = false, isDisplayArrowDown, areaLabel} = this.props;
         const collapsedClass = isInitiallyCollapsed ? '' : 'show';
         const roundedTop = isRoundedTop ? 'rounded-top' : '';
         const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
-        const isCollapseDisabled = header === undefined || header === '';
+
         return (
             <div className="pos-f-t">
                 <div className={'collapse ' + collapsedClass} id={id}>

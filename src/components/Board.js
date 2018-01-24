@@ -7,7 +7,7 @@ const Board = () => {
         <CollapsableContentEntry id="boardId" bgColorCssClass="bg-light" isRoundedTop={false} isRoundedBottom={false}
                                  textColorCssClass="text-dark"
                                  header="" secondHeader="Styrelsen"
-                                 areaLabel="boardInfo" isInitiallyCollapsed={true}>
+                                 areaLabel="boardInfo" isInitiallyCollapsed={false} isCollapseDisabled={true}>
             <BoardInfo/>
         </CollapsableContentEntry>
 
