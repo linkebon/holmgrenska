@@ -1,37 +1,47 @@
-import React from 'react';
-import $ from 'jquery';
-import RotatableArrow from "./RotatableArrow";
+import React, {Component} from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isDisplayArrowDown, areaLabel,}) => {
-    const collapsedClass = isInitiallyCollapsed ? '' : 'show';
-    const roundedTop = isRoundedTop ? 'rounded-top' : '';
-    const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
-    const arrowIconId = id + 'ArrowIcon';
-    const displayArrow = () => {
-        return isDisplayArrowDown ? <RotatableArrow id={arrowIconId}/> : '';
-    };
-    return (
-        <div className="pos-f-t">
-            <div className={'collapse ' + collapsedClass} id={id}>
-                <div className={bgColorCssClass + ' p-4 ' + roundedTop}>
-                    <h6 className={'text-capitalize ' + textColorCssClass}>{secondHeader}</h6>
-                    <div className="text-muted">{children}</div>
+class CollapsableContentEntry extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            arrowDirection: 0
+        };
+    }
+
+    rotateArrow() {
+        this.setState(this.state.arrowDirection === 0 ? {arrowDirection: 180} : {arrowDirection: 0});
+    }
+
+    render() {
+        const {id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isDisplayArrowDown, areaLabel} = this.props;
+        const collapsedClass = isInitiallyCollapsed ? '' : 'show';
+        const roundedTop = isRoundedTop ? 'rounded-top' : '';
+        const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
+
+        return (
+            <div className="pos-f-t">
+                <div className={'collapse ' + collapsedClass} id={id}>
+                    <div className={bgColorCssClass + ' p-4 ' + roundedTop}>
+                        <h6 className={'text-capitalize ' + textColorCssClass}>{secondHeader}</h6>
+                        <div className="text-muted">{children}</div>
+                    </div>
+                </div>
+                <div className={'navbar ' + bgColorCssClass + ' ' + roundedBottom}>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target={'#' + id} aria-controls={id}
+                            aria-expanded="false" aria-label={areaLabel} onClick={(e) => {
+                        e.preventDefault();
+                        if (isDisplayArrowDown) {
+                            this.rotateArrow();
+                        }
+                    }}>
+                        <h4 className={textColorCssClass}><FontAwesomeIcon icon="chevron-down" className={isDisplayArrowDown ? '': 'hidden'} size="xs" transform={{rotate: this.state.arrowDirection}}/><span style={{marginRight: '10px'}} />{header}</h4>
+                    </button>
                 </div>
             </div>
-            <div className={'navbar ' + bgColorCssClass + ' ' + roundedBottom}>
-                <button className="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target={'#' + id} aria-controls={id}
-                        aria-expanded="false" aria-label={areaLabel} onClick={(e) => {
-                    e.preventDefault();
-                    if (isDisplayArrowDown) {
-                        $('#' + arrowIconId).toggleClass("down")
-                    }
-                }}>
-                    <h4 className={textColorCssClass}>{displayArrow()}{header}</h4>
-                </button>
-            </div>
-        </div>
-    )
-};
+        )
+    }
+}
 
 export default CollapsableContentEntry
