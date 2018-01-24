@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import RotatableArrow from "./RotatableArrow";
 
 const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isDisplayArrowDown, areaLabel,}) => {
     const collapsedClass = isInitiallyCollapsed ? '' : 'show';
@@ -7,7 +8,7 @@ const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCss
     const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
     const arrowIconId = id + 'ArrowIcon';
     const displayArrow = () => {
-        return isDisplayArrowDown ? '' : 'hidden';
+        return isDisplayArrowDown ? <RotatableArrow id={arrowIconId}/> : '';
     };
     return (
         <div className="pos-f-t">
@@ -22,10 +23,11 @@ const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCss
                         data-target={'#' + id} aria-controls={id}
                         aria-expanded="false" aria-label={areaLabel} onClick={(e) => {
                     e.preventDefault();
-                    $('#' + arrowIconId).toggleClass("down")
+                    if (isDisplayArrowDown) {
+                        $('#' + arrowIconId).toggleClass("down")
+                    }
                 }}>
-                    <h4 className={textColorCssClass}><i id={arrowIconId} className={"fa fa-chevron-down fa-1x rotate " + displayArrow()}
-                                                         aria-hidden="true"/> {header} </h4>
+                    <h4 className={textColorCssClass}>{displayArrow()}{header}</h4>
                 </button>
             </div>
         </div>
