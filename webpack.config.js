@@ -7,7 +7,7 @@ let outputConf = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-    outputConf.path = path.join(__dirname, 'build')
+    outputConf.path = path.join(__dirname, 'build/holmgrenska')
 }
 
 const config = {

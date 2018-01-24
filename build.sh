@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf build
-mkdir build
-cp -R src/resources/* ./build
+mkdir -p ./build/holmgrenska
+cp -R src/resources/* ./build/holmgrenska
 npm run generateFrontend
 
 
