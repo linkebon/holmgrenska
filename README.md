@@ -1,4 +1,4 @@
-Homepage app with React 16.2.0 and redux 3.7.2
+Homepage app with React 16.2.0 and bootstrap 4
 =
 Build
 == 
