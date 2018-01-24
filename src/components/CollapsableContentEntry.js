@@ -1,9 +1,14 @@
 import React from 'react';
+import $ from 'jquery';
 
-const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, areaLabel}) => {
-    const collapsedClass = isInitiallyCollapsed ? 'show' : '';
+const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCssClass, textColorCssClass, isRoundedTop, isRoundedBottom, isInitiallyCollapsed, isDisplayArrowDown, areaLabel,}) => {
+    const collapsedClass = isInitiallyCollapsed ? '' : 'show';
     const roundedTop = isRoundedTop ? 'rounded-top' : '';
     const roundedBottom = isRoundedBottom ? 'rounded-bottom' : '';
+    const arrowIconId = id + 'ArrowIcon';
+    const displayArrow = () => {
+        return isDisplayArrowDown ? '' : 'hidden';
+    };
     return (
         <div className="pos-f-t">
             <div className={'collapse ' + collapsedClass} id={id}>
@@ -15,8 +20,12 @@ const CollapsableContentEntry = ({id, header, secondHeader, children, bgColorCss
             <div className={'navbar ' + bgColorCssClass + ' ' + roundedBottom}>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target={'#' + id} aria-controls={id}
-                        aria-expanded="false" aria-label={areaLabel}>
-                    <h4 className={textColorCssClass}>{header}</h4>
+                        aria-expanded="false" aria-label={areaLabel} onClick={(e) => {
+                    e.preventDefault();
+                    $('#' + arrowIconId).toggleClass("down")
+                }}>
+                    <h4 className={textColorCssClass}><i id={arrowIconId} className={"fa fa-chevron-down fa-1x rotate " + displayArrow()}
+                                                         aria-hidden="true"/> {header} </h4>
                 </button>
             </div>
         </div>

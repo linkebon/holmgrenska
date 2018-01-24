@@ -6,7 +6,7 @@ const HolmgrensBladet = () => (
         <CollapsableContentEntry id="holmgrensbladetId" bgColorCssClass="bg-light" isRoundedTop={false}
                                  isRoundedBottom={false}
                                  textColorCssClass="text-dark" header="" secondHeader="Holmgrensbladet"
-                                 areaLabel="holmgrensbladet" isInitiallyCollapsed={true}>
+                                 areaLabel="holmgrensbladet" isInitiallyCollapsed={false} isDisplayArrowDown={false}>
             Holmgrensbladet är föreningens tidning som kommer ut en gång om året. I den finner du artiklar om släktingar
             och
             även utdrag ur skrifter om släkten. Vi har också flera medlemmar som släktforskar och om deras forskning kan
@@ -32,7 +32,7 @@ const HolmgrensBladet = () => (
                                      isRoundedTop={false} isRoundedBottom={false}
                                      textColorCssClass="text-dark"
                                      header="Tidigare utgåvor" secondHeader=""
-                                     areaLabel="holmgrensBladetEarlier" isInitiallyCollapsed={false}>
+                                     areaLabel="holmgrensBladetEarlier" isInitiallyCollapsed={true} isDisplayArrowDown={true}>
                 <div>Här hittar du tidigare utgåvor....</div>
             </CollapsableContentEntry>
         </CollapsableContentEntry>
