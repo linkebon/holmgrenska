@@ -4,7 +4,6 @@ const GeneralInfo = () => (
     <div>
         <p>
             Släktföreningen startade i Stockholm 1924.
-            <br/>
             Medlemmarna är alla ättlingar till Hovpredikanten i Västra Ny, Östergötlands län
             Anders Holmgren (1784 - 1874) och hans hustru Gustafva Nordwall (1797 - 1860).
         </p>
