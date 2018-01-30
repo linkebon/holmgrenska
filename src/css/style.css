@@ -1,4 +1,4 @@
-
+@import '~react-responsive-carousel/lib/styles/carousel.min.css';
 a {
     color: #9d9d9d;
 }
@@ -29,6 +29,7 @@ a:hover {
 
 .hidden { display: none;}
 
-.carousel-inner img {
+.carousel-style {
     margin: auto;
+    max-width: 65%;
 }

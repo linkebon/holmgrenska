@@ -1,33 +1,24 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import {Carousel} from 'react-responsive-carousel'
 
 const YearlyMeetingImages = ({carouselId, images}) => {
-    const carouselIdAnchor = '#' + carouselId;
     const renderImages = () => {
         return images.map((img, index) => {
             const active = index === 0 ? 'active' : '';
             return (
-                <div key={carouselId + index} className={"carousel-item " + active}>
-                    <img className="d-block img-fluid" src={img.url} alt={img.alt}/>
-                    <div className="text-center text-muted">
-                        <p>{img.text}</p>
-                    </div>
+                <div key={carouselId + index}>
+                    <img src={img.url} alt={img.alt}/>
+                    <p className="legend">{img.text}</p>
                 </div>
             )
         })
     };
 
     return (
-        <div id={carouselId} className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner" role="listbox">
+        <div className="carousel-style">
+            <Carousel>
                 {renderImages()}
-            </div>
-            <a className="carousel-control-prev text-muted" href={carouselIdAnchor} role="button" data-slide="prev">
-                <FontAwesomeIcon icon="chevron-left" size="3x"/>
-            </a>
-            <a className="carousel-control-next text-muted" href={carouselIdAnchor} role="button" data-slide="next">
-                <FontAwesomeIcon icon="chevron-right" size="3x"/>
-            </a>
+            </Carousel>
         </div>
     )
 };

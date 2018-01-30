@@ -23,17 +23,17 @@ class HolmgrensMeetings extends Component {
             }, {
                 url: 'http://blog.shopgala.com/wp-content/uploads/2017/07/Free-button1.jpg',
                 alt: 'testar0',
-                header: 'Bild2',
+                header: 'Bild1',
                 text: 'John Doe, Jane Doe 2'
             }, {
                 url: 'http://blog.shopgala.com/wp-content/uploads/2017/07/Free-button1.jpg',
                 alt: 'testar0',
-                header: 'Bild3',
+                header: 'Bild1',
                 text: 'John Doe, Jane Doe 3'
             }, {
                 url: 'http://blog.shopgala.com/wp-content/uploads/2017/07/Free-button1.jpg',
                 alt: 'testar0',
-                header: 'Bild4',
+                header: 'Bild1',
                 text: 'John Doe, Jane Doe 4'
             }
         ];
@@ -67,7 +67,6 @@ class HolmgrensMeetings extends Component {
                     <YearlyMeeting carouselId={this.generateComponentId()} images={images}/>
                 </CollapsableContentEntry>
             </div>
-
         )
     }
 }
