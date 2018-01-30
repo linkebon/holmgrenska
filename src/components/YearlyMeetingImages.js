@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-const YearlyMeeting = ({carouselId, images}) => {
+const YearlyMeetingImages = ({carouselId, images}) => {
     const carouselIdAnchor = '#' + carouselId;
     const renderImages = () => {
         return images.map((img, index) => {
@@ -9,6 +9,9 @@ const YearlyMeeting = ({carouselId, images}) => {
             return (
                 <div key={carouselId + index} className={"carousel-item " + active}>
                     <img className="d-block img-fluid" src={img.url} alt={img.alt}/>
+                    <div className="text-center text-muted">
+                        <p>{img.text}</p>
+                    </div>
                 </div>
             )
         })
@@ -29,4 +32,4 @@ const YearlyMeeting = ({carouselId, images}) => {
     )
 };
 
-export default YearlyMeeting
+export default YearlyMeetingImages
