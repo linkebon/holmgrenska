@@ -19,17 +19,22 @@ const HolmgrensBladet = () => (
             <p>Ansvarig för Holmgrensbladet är Hampus Holmgren. e-postadress: <a
                 href="mailto:bladet@holmgrenska.se">bladet@holmgrenska.se</a></p>
             <br/><img src="img/holmgrensbladet.gif"/>
-            <br />
+            <br/>
             <p>Holmgrensbladets logotype är utförd av Tom Hård af Segersted (5621)</p>
             <br/>
             <br/>
             <CollapsableContentEntry id="holmgrensBladetEarlierId" bgColorCssClass="background-color-light-blue"
                                      isRoundedTop={false} isRoundedBottom={false}
                                      textColorCssClass="text-dark"
-                                     header="Tidigare utgåvor" secondHeader=""
-                                     areaLabel="holmgrensBladetEarlier" isInitiallyCollapsed={true}
+                                     header="Utgåvor" secondHeader="Klicka för att ladda hem eller öppna!"
+                                     areaLabel="holmgrensBladetEarlier" isInitiallyCollapsed={false}
                                      isDisplayArrowDown={true}>
-                <div><p>Här hittar du tidigare utgåvor....</p></div>
+                <div>
+                    <br />
+                    <ul>
+                        <li><a style={{color: "#000000"}} href="holmgrensblad/2017.pdf"><h4>2017 års holmgrensblad</h4></a></li>
+                    </ul>
+                </div>
             </CollapsableContentEntry>
         </CollapsableContentEntry>
     </div>

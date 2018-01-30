@@ -5,7 +5,7 @@ class CollapsableContentEntry extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrowDirection: 0
+            arrowDirection: props.isInitiallyCollapsed ? 0 : 180
         };
     }
 
