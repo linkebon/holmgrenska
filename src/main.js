@@ -6,10 +6,10 @@ import React from 'react';
 import {render} from 'react-dom';
 import App from "./components/App";
 import fontawesome from '@fortawesome/fontawesome'
-import { faChevronDown} from '@fortawesome/fontawesome-free-solid'
+import {faChevronDown, faChevronLeft, faChevronRight} from '@fortawesome/fontawesome-free-solid'
 
 // add wanted font awesome stuff
-fontawesome.library.add(faChevronDown);
+fontawesome.library.add(faChevronDown,faChevronLeft, faChevronRight);
 
 render(
     <App/>,

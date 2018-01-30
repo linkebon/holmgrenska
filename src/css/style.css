@@ -28,3 +28,7 @@ a:hover {
 }
 
 .hidden { display: none;}
+
+.carousel-inner img {
+    margin: auto;
+}
