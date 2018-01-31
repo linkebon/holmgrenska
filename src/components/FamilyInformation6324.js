@@ -20,7 +20,9 @@ const FamilyInformation6324 = () => {
     ];
     const generalFamilyTextMarkup =
         <div>
-            <p className="font-weight-bold">Thomas och Elisabet Holmgren är föräldrar och har barnen i nedan följd</p>
+            <p className="font-weight-bold">
+                Thomas och Elisabet Holmgren är föräldrar och har barnen i nedan följd
+            </p>
             <ul className="tree">
                 <li>Thomas Holmgren 6324 & Elisabet Holmgren
                     <ul>
@@ -60,10 +62,13 @@ const FamilyInformation6324 = () => {
                 </li>
 
             </ul>
+            <br />
+            <br />
+            <p><i>Här ska lite information om familjen stå.</i></p>
         </div>;
     return (
         <div>
-            <CollapsableContentEntry id={uuidv1()} bgColorCssClass="" isCollapseDisabled={true}
+            <CollapsableContentEntry id={uuidv1()} bgColorCssClass="bg-light" isCollapseDisabled={true}
                                      isRoundedTop={false}
                                      isRoundedBottom={true}
                                      textColorCssclassName="text-dark"
