@@ -1,8 +1,8 @@
 import React from 'react';
 import CollapsableContentEntry from './CollapsableContentEntry';
-import ScholorShips from "./Scholorships";
-import GeneralInfo from "./GeneralInfo";
-import RelativeNumberInfo from "./RelativeNumberInfo";
+import ScholorShipsInfo from "../contentcomponents/ScholorshipsInfo";
+import GeneralInfo from "../contentcomponents/GeneralInfo";
+import RelativeNumberInfo from "../contentcomponents/RelativeNumberInfo";
 
 const Home = () => {
     return (
@@ -23,7 +23,7 @@ const Home = () => {
                                      areaLabel="Scholorships"
                                      isInitiallyCollapsed={true}
                                      isDisplayArrowDown={true}>
-                <ScholorShips/>
+                <ScholorShipsInfo/>
             </CollapsableContentEntry>
             <CollapsableContentEntry id="relativeInfoId" bgColorCssClass="bg-light" isRoundedTop={false}
                                      isRoundedBottom={true}

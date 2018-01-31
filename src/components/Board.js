@@ -1,5 +1,5 @@
 import React from 'react';
-import BoardInfo from "./BoardInfo";
+import BoardInfo from "../contentcomponents/BoardInfo";
 import CollapsableContentEntry from "./CollapsableContentEntry";
 
 const Board = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ScholorShips = () => (
+const ScholorShipsInfo = () => (
     <div>
         <p>Alla studerande som är holmgrensättlingar kan ansöka om stipendier ur den Holmgrenska släktfonden. Du måste
             var medlem i vår förening och kunna ange ditt släktnummer. Ansökningar och frågor kan ställas till
@@ -12,4 +12,4 @@ const ScholorShips = () => (
 );
 
 
-export default ScholorShips
+export default ScholorShipsInfo

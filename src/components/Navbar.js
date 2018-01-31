@@ -10,7 +10,7 @@ const Navbar = (props) => (
                   aria-haspopup="true"
                   aria-expanded="false">Släktinformation</Link>
             <div className="dropdown-menu text-dark" aria-labelledby="Preview">
-                <Link className="dropdown-item text-dark font-weight-bold" to="/6324">Med släktnummer: 6324*</Link>
+                <Link className="dropdown-item text-dark font-weight-bold" to="/6324">Släkt - 6324* (Eskilstuna)</Link>
             </div>
             <Link className="navbar-brand text-dark font-weight-bold" to="/holmgrensbladet">Holmgrensbladet</Link>
             <Link className="navbar-brand text-dark font-weight-bold" to="/board">Styrelsen</Link>

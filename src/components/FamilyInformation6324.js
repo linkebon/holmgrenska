@@ -40,17 +40,17 @@ const FamilyInformation6324 = () => {
                                 <li>Arvid Holmgren 63243</li>
                             </ul>
                         </li>
-                        <li>Björn Holmgren 63243 & Carline Holmgren
+                        <li>Björn Holmgren 63243 & Caroline Holmgren
                             <ul>
                                 <li>Axel Holmgren 632431</li>
                                 <li>Vincent Holmgren 632432</li>
                                 <li>Natan Holmgren 6324323</li>
                             </ul>
                         </li>
-                        <li>Karin Holmgren 63244 & Staffan Holmgren
+                        <li>Karin Östlund 63244 & Staffan Östlund
                             <ul>
-                                <li>Gustav Holmgren 632441</li>
-                                <li>Felix Holmgren 632442</li>
+                                <li>Gustav Östlund 632441</li>
+                                <li>Felix Östlund 632442</li>
                             </ul>
                         </li>
                         <li>Staffan Holmgren 63245 & Matilda Holmgren
@@ -63,8 +63,7 @@ const FamilyInformation6324 = () => {
 
             </ul>
             <br />
-            <br />
-            <p><i>Här ska lite information om familjen stå.</i></p>
+            <div className="container">Thomas och Elisabet gifte sig 1968 i Lidingö kyrka. Bodde i Linköping där Fredrik föddes. Flyttade till Eskilstuna där resten av barnaskaran föddes. Inga barn bor kvar där och nu går flytten till Örebro. </div>
         </div>;
     return (
         <div>
