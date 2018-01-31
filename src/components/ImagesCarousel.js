@@ -1,7 +1,7 @@
 import React from 'react';
 import {Carousel} from 'react-responsive-carousel'
 
-const ImagesCarousel = ({carouselId, images}) => {
+const ImagesCarousel = ({carouselId, images, autoPlay = false, interval = 5000}) => {
     const renderImages = () => {
         return images.map((img, index) => {
             const active = index === 0 ? 'active' : '';
@@ -14,11 +14,18 @@ const ImagesCarousel = ({carouselId, images}) => {
         })
     };
 
+    const renderAutoPlayText = () => {
+        return autoPlay ?
+            <p className="text-center small">Bilderna roterar var {interval / 1000} sekund. Håll musen över bilden för att sluta rotera dom.</p> : ''
+    };
+
+
     return (
         <div className="carousel-style">
-            <Carousel>
+            <Carousel autoPlay={autoPlay} interval={interval} dynamicHeight={true}>
                 {renderImages()}
             </Carousel>
+            {renderAutoPlayText()}
         </div>
     )
 };

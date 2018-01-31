@@ -10,9 +10,9 @@ const FamilyInformation = ({familyNumber, familyName, generalFamilyTextMarkup, i
                 {generalFamilyTextMarkup}
             </div>
             <br/>
-            <ImagesCarousel carouselId={uuidv1()} images={images}/>
+            <ImagesCarousel carouselId={uuidv1()} images={images} autoPlay={true} interval={7000}/>
         </div>
     )
 };
 
-export default FamilyInformation
+export default FamilyInformation;
