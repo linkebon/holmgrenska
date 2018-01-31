@@ -32,7 +32,7 @@ const HolmgrensBladet = () => (
                 <div>
                     <br />
                     <ul>
-                        <li><a style={{color: "#000000"}} href="holmgrensblad/2017.pdf"><h4>2017 års holmgrensblad</h4></a></li>
+                        <li><a style={{color: "#000000"}} href="holmgrensblad/2017.pdf" target="_blank"><h4>2017 års holmgrensblad</h4></a></li>
                     </ul>
                 </div>
             </CollapsableContentEntry>
