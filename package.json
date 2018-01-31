@@ -8,7 +8,6 @@
     "devPlayServer": "NODE_ENV=dev_play ./node_modules/.bin/webpack -d --watch"
   },
   "author": "linkebon",
-  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.2",
     "@fortawesome/fontawesome-free-solid": "^5.0.4",
@@ -27,6 +26,7 @@
     "jquery": "^3.2.1",
     "npm": "^5.6.0",
     "popper.js": "^1.12.9",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",

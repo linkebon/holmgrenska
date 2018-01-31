@@ -9,12 +9,10 @@ const FamilyInformation6324 = () => {
         {
             url: 'img/6324/63245_matildastaffanviggo.jpg',
             alt: 'Staffan, Matilda och Viggo',
-            header: '',
             text: 'Staffan Holmgren (63245) , Matilda Holmgren och Viggo Holmgren, Thailand, Koh Lanta 2017, december'
         }, {
             url: 'img/6324/6324_thomas_elisabeth.jpg',
             alt: 'Thomas Elisabeth',
-            header: '',
             text: 'Thomas Holmgren (6324), Elisabet Holmgren'
         }
     ];

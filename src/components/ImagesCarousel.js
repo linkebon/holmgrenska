@@ -1,5 +1,6 @@
 import React from 'react';
 import {Carousel} from 'react-responsive-carousel'
+import PropTypes from 'prop-types';
 
 const ImagesCarousel = ({carouselId, images, autoPlay = false, interval = 5000}) => {
     const renderImages = () => {
@@ -16,7 +17,8 @@ const ImagesCarousel = ({carouselId, images, autoPlay = false, interval = 5000})
 
     const renderAutoPlayText = () => {
         return autoPlay ?
-            <p className="text-center small">Bilderna roterar var {interval / 1000} sekund. Håll musen över bilden för att sluta rotera dom.</p> : ''
+            <p className="text-center small">Bilderna roterar var {interval / 1000} sekund. Håll musen över bilden för
+                att sluta rotera dom.</p> : ''
     };
 
 
@@ -29,4 +31,18 @@ const ImagesCarousel = ({carouselId, images, autoPlay = false, interval = 5000})
         </div>
     )
 };
+
+ImagesCarousel.propTypes = {
+    carouselId: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.shape(
+        {
+            url: PropTypes.string.isRequired,
+            alt: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired
+        }
+    )),
+    autoPlay: PropTypes.bool,
+    interval: PropTypes.number
+};
+
 export default ImagesCarousel
