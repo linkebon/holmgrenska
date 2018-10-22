@@ -24,7 +24,7 @@ const ImagesCarousel = ({carouselId, images, autoPlay = false, interval = 5000})
 
     return (
         <div className="carousel-style">
-            <Carousel autoPlay={autoPlay} interval={interval} dynamicHeight={true}>
+            <Carousel autoPlay={autoPlay} interval={interval} dynamicHeight={true} infiniteLoop={true}>
                 {renderImages()}
             </Carousel>
             {renderAutoPlayText()}

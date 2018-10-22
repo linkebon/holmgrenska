@@ -10,6 +10,12 @@ universal dist
 
 Files will be placed under folder build
 
+Start holmgrenska
+===
+serve.js need to be installed globally
+run scripts/bin/START_HOLMGRENSKA.sh 
+Port is: 5000 
+
 dev
 ==
 npm run dev

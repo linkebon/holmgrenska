@@ -1,0 +1,3 @@
+Create symlink to resources images folder and index page
+ln -s ../src/resources/img img
+ln -s ../src/resources/index.html index.html
